@@ -1773,7 +1773,7 @@ background-color: #ededed;
     flex: 1 0 calc(33.333% - 0.5rem); /* Three tags per line */
   }
 
-  .project-tags .tag:nth-last-child(-n+3) {
+  .project-tags .tag:nth-last-child(-n+8) {
     margin-bottom: 0; /* Removes bottom margin for the last three items to avoid extra space at the bottom */
   }
 }
