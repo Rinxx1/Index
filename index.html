@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhence Paradela</title>
+    <link rel="icon" type="image/x-icon" href="hero.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+</head>
+<body>
+
+<div class="sticky-container">
+  <!-- Scroll Up Button -->
+  <a href="#home" class="scroll-to-top">
+    <img src="Scrollup.png" alt="Scroll Up">
+  </a>
+
+  <!-- Light Mode Toggle Button -->
+  <button id="lightModeToggle" class="light-mode-toggle">
+    <img src="LightToggle.png" alt="Light Mode">
+  </button>
+</div>
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">@rhencepards</a>
+
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiences">Experiences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              
+                    </ul>
+                      
+                </div>
+            </div>
+        </nav>
+    </header>
+ <script>
+$(document).ready(function() {
+    $('.navbar-toggler').off('click').on('click', function(e) {
+        e.preventDefault(); // Prevent default action of the button
+        $('#navbarContent').collapse('toggle'); // Explicitly toggle the collapse element
+    });
+});
+</script>
+
+
+    <div class="preloader">
+    <div class="spinner"></div>
+</div>
+<section id="home" class="intro-section ">
+<!-- Inside your <section id="home"> -->
+<div class="container">
+    <div class="row align-items-center">
+        <!-- The image container -->
+        <div class="col-lg-6 hero-image">
+            <img src="Hero.png" alt="Headshot" class="img-fluid">
+        </div>
+        <!-- .hero-image & hero-text margins to adjust!-->
+        <div class="col-lg-6 hero-text">
+            <p>Yow, I'm Rhence Paradela&nbsp;<i class="fas fa-hand-paper handwave"></i></p>
+            <h1>I <span class="highlight"> develop </span> and<span class="highlight"> design </span> things for game and web</h1>
+         <button class="btn btney">Download CV</button>
+              <div class="hero-icons">
+             <a href="https://www.facebook.com/rhenceee?mibextid=ZbWKwL" class="icon-button">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/rhencepards" class="icon-button" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+      <a href="https://ph.linkedin.com/in/rhence-paradela-b32b29318" class="icon-button">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- Add more icons as needed -->
+  </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="portfolio" class="projects-section fade-in">
+    <h1 class="sec-title">Featured Projects</h1>
+     <p class="section-subtitle"><span class="highlight">_what i have done?</span></p>
+    <div class="project-grid">
+
+<div class="project-card fade-in-left">
+  <div class="project-image project-image-right">
+    <img src="Projects/scan me.gif" alt="Project Image" style="border-top-left-radius: 10px; border-top-right-radius: 30px; border-bottom-left-radius: 10px; border-bottom-right-radius: 30px;" loading="lazy">
+<!--
+   <div class="image-overlay">
+      <p class="image-text">Project Name and Details</p>
+    </div>
+   -->
+  </div>
+  <div class="project-details project-details-left">  
+    <h3 class="project-title">Scan Me</h3>
+    <p class="project-subtitle">Website</p>
+    <p class="project-description">
+        Experience seamless travel payments in General Santos City with Scan Me. Scan a QR code to pay fares instantly and safely, perfect for contactless transactions during COVID-19.
+    </p>
+<div class="project-tags">
+  <span class="tag html-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="tag-icon" alt="HTML5">HTML
+  </span>
+  <span class="tag css-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="tag-icon" alt="CSS3">CSS
+  </span>
+  <span class="tag bootstrap-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="tag-icon" alt="Bootstrap">Bootstrap
+  </span>
+  <span class="tag js-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="tag-icon" alt="JavaScript">JavaScript
+  </span>
+      <span class="tag sql-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" class="tag-icon">SQL
+  </span>
+   <span class="tag php-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="tag-icon">PHP
+  </span>
+  <!-- Add more tags as needed -->
+</div>
+
+
+   
+<a class="btn" href="https://github.com/Rinxx1/Scan-Me-System.git" target="_blank" >
+  <center>
+  <i class="devicon-github-original"></i> Take a Look
+</center>
+</a>
+
+  </div>
+</div>
+
+<div class="project-card fade-in-right">
+  <div class="project-image project-image-left">
+    <img src="Projects/Leavemgm.gif" alt="Project Image" style="border-top-left-radius: 30px; border-top-right-radius: 10px; border-bottom-left-radius: 30px; border-bottom-right-radius: 10px;" loading="lazy">
+<!--
+   <div class="image-overlay">
+      <p class="image-text">Project Name and Details</p>
+    </div>
+   -->
+  </div>
+  <div class="project-details">
+    <h3 class="project-title">Leave Management System</h3>
+    <p class="project-subtitle">Website</p>
+    <p class="project-description">
+      Manage leave requests online with our Leave Management System. Track your leave credits from anywhere and get seamless approvals from department heads.
+    </p>
+<!-- Inside your .project-tags div where you want to display the tags -->
+<div class="project-tags">
+  <span class="tag html-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="tag-icon" alt="HTML5">HTML
+  </span>
+  <span class="tag css-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="tag-icon" alt="CSS3">CSS
+  </span>
+  <span class="tag bootstrap-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="tag-icon" alt="Bootstrap">Bootstrap
+  </span>
+  <span class="tag js-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="tag-icon" alt="JavaScript">JavaScript
+  </span>
+    <span class="tag sql-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" class="tag-icon">SQL
+  </span>
+   <span class="tag php-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="tag-icon">PHP
+  </span>
+  <!-- Add more tags as needed -->
+</div>
+
+
+<a class="btn" href="https://github.com/Rinxx1/Leave-Management-System.git" target="_blank">
+  <i class="devicon-github-original"></i> Take a Look
+</a>
+
+  </div>
+</div>
+
+
+
+<div class="project-card fade-in-left">
+  <div class="project-image project-image-right">
+    <img src="Projects/download.gif" alt="Project Image" style="border-top-left-radius: 10px; border-top-right-radius: 30px; border-bottom-left-radius: 10px; border-bottom-right-radius: 30px;" loading="lazy">
+<!--
+   <div class="image-overlay">
+      <p class="image-text">Project Name and Details</p>
+    </div>
+   -->
+  </div>
+  <div class="project-details project-details-left">
+    <h3 class="project-title">Anita: Homecoming Return of Pariah</h3>
+    <p class="project-subtitle">Website & Game Application</p>
+    <p class="project-description">Embark on a 3D adventure game for mobile devices, inspired by the rich folklore of the B'laan tribe from the southern Philippines. This game features a companion website to track items, player locations, health, and more</p>
+
+<!-- Inside your .project-tags div where you want to display the tags -->
+ 
+<div class="project-tags">
+  <span class="tag html-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="tag-icon" alt="HTML5">HTML
+  </span>
+  <span class="tag css-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="tag-icon" alt="CSS3">CSS
+  </span>
+  <span class="tag js-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="tag-icon" alt="JavaScript">JavaScript
+  </span>
+  <span class="tag bootstrap-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="tag-icon" alt="Bootstrap">Bootstrap
+  </span>
+   <span class="tag sql-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" class="tag-icon">SQL
+  </span>
+   <span class="tag php-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="tag-icon">PHP
+  </span>
+     <span class="tag c#-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="tag-icon">C#
+  </span>
+  <span class="tag unity-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original-wordmark.svg" alt="C#" class="tag-icon">Unity
+ </span>
+  <!-- Add more tags as needed -->
+</div>
+
+
+   
+<a class="btn" href="https://github.com/Rinxx1/Anita-Homecoming-Return-of-Pariah.git" target="_blank">
+  <i class="devicon-github-original"></i> Take a Look
+</a>
+
+  </div>
+</div>
+
+<div class="project-card fade-in-right">
+  <div class="project-image project-image-left">
+    <img src="Projects/officeexp.gif" alt="Project Image" style="border-top-left-radius: 30px; border-top-right-radius: 10px; border-bottom-left-radius: 30px; border-bottom-right-radius: 10px;" loading="lazy">
+<!--
+   <div class="image-overlay">
+      <p class="image-text">Project Name and Details</p>
+    </div>
+   -->
+  </div>
+  <div class="project-details">
+    <h3 class="project-title">Office Expense Management System</h3>
+    <p class="project-subtitle">Website</p>
+    <p class="project-description">
+        Streamline office expense tracking effortlessly. Record suppliers, products, and all office expenditures seamlessly with our intuitive management system.
+    </p>
+<!-- Inside your .project-tags div where you want to display the tags -->
+<div class="project-tags">
+  <span class="tag html-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="tag-icon" alt="HTML5">HTML
+  </span>
+  <span class="tag css-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="tag-icon" alt="CSS3">CSS
+  </span>
+  <span class="tag js-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="tag-icon" alt="JavaScript">JavaScript
+  </span>
+  <span class="tag bootstrap-tag">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="tag-icon" alt="Bootstrap">Bootstrap
+  </span>
+  <span class="tag sql-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" class="tag-icon">SQL
+  </span>
+   <span class="tag php-tag">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="tag-icon">PHP
+  </span>
+  <!-- Add more tags as needed -->
+</div>
+
+
+
+<a class="btn" href="https://github.com/Rinxx1/Office-Expense-Management-System.git" target="_blank">
+  <i class="devicon-github-original"></i> Take a Look
+</a>
+
+  </div>
+</div>
+
+
+<button id="toggleProjects" class="btn">Show More</button>
+
+    </div>
+</section>
+
+
+<!-- EXPERIENCE SECTION -->
+<section id="experiences" class="experiences-section fade-in">
+  <div class="container">
+   <h1 class="sec-title">Experiences</h1>
+    <p class="section-subtitle"><span class="highlight">_what i have done?</span></p>
+    <div class="experiences-wrapper">
+      <!-- Experience Card 1 -->
+      <div class="experience-card fade-in-left">
+        <h3 class="company-name">Apple Custard Outsourcing</h3>
+        <p class="role"><span class="highlight">Web Developer - Internship 2019</span></p>
+        <p class="experience-description">
+          Developed an office expense management system tailored to company needs, utilizing technologies such as HTML, CSS, JavaScript, PHP, and MySQL.
+        </p>
+      </div>
+  
+      <!-- Experience Card 2 -->
+      <div class="experience-card fade-in-right">
+        <h3 class="company-name">RD Realty Development Corporation</h3>
+        <p class="role"><span class="highlight">Web Developer - Internship 2022</span></p>
+        <p class="experience-description">
+          Developed a Leave Management System to manage leave requests online, track leave credits from anywhere, and get seamless approvals from department heads. Utilized technologies such as HTML, CSS, JavaScript, PHP, and MySQL.
+
+        </p>
+      </div>
+
+      <div class="experience-card fade-in-right">
+        <h3 class="company-name">Dalton Pawnshop & Jewerly Inc.</h3>
+        <p class="role"><span class="highlight">Software Developer</span></p>
+        <p class="experience-description">
+          Developed and maintained web and Windows applications. Enhanced system workflows by sharing ideas with the head programmer. Provided technical support by assisting colleagues in resolving various computer issues when not occupied with primary tasks.
+        </p>
+      </div>
+      <!-- More experience cards as needed -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section fade-in">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 about-text">
+        <div class="about-card fade-in-left">
+        <h1 class="sec-title">About</h1>
+        <p class="about-subtitle"><span class="highlight">_what i love to do?</span></p>
+        <p >I am a full-stack developer and designer with a strong focus on creating interactive and user-friendly websites, Windows applications, and games. My journey started with simple web designs, but I quickly became captivated by the limitless opportunities in development.</p>
+        <p>I specialize in developing engaging user interfaces and reliable backend services, always paying attention to detail and striving to exceed expectations. Beyond coding, I am committed to continuous learning and enjoy mentoring new developers.</p>
+        <p>In my free time, I explore the latest tech trends and contribute to open-source projects. I believe technology can solve real-world problems, and I aim to create solutions that make a positive impact across various platforms.</p>
+        <div class="about-tags">
+          <span class="tag1">#Coding</span>
+          <span class="tag1">#Learning</span>
+          <span class="tag1">#Innovation</span>
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-6 about-images">
+        <img src="About\1.png" alt="About Image 1" class="img-fluid " loading="lazy">
+        <img src="About\2.png" alt="About Image 2" class="img-fluid" loading="lazy">
+          <img src="About\3.png" alt="About Image 3" class="img-fluid" loading="lazy">
+            <img src="About\4.png" alt="About Image 4" class="img-fluid" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TOOLS AND FRAMEWORK SECTION -->
+<section id="tools" class="tools-section fade-in">
+  <div class="container">
+    <h1 class="section-title sec-title">Tools and Frameworks</h1>
+    <p class="secb"><span class="highlight">_what tools have I used?</span></p>
+    <div class="tools-content">
+      <div class="tools-image">
+        <img src="TSMen.png" alt="Tools Image">
+      </div>
+
+    <div class="flex-container fade-in-right">
+<div class="expertise">
+  <h3>EXPERTISE</h3>
+  <div class="skills-container">
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>HTML</p>
+    </div>
+    <div class="skill">
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>CSS</p>
+    </div>
+      <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>PHP</p>
+    </div>
+          <div class="skill">
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>JAVA</p>
+    </div>
+
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>SQL</p>
+    </div>
+
+  </div>
+</div>  
+<!-- OTHERS SECTION -->
+<div class="others">
+  <h3>OTHERS</h3>
+  <div class="skills-container">
+ <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>PYTHON</p>
+    </div>
+ <div class="skill">
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>C#</p>
+    </div>
+ <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>VB</p>
+    </div>
+
+   <div class="skill">
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>BOOTSTRAP</p>
+    </div>
+    <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>JAVASCRIPT</p>
+    </div>
+     <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Photoshop" class="skill-icon skill-image">
+      <p>FIGMA</p>
+    </div>
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" alt="Photoshop" class="skill-icon skill-image">
+    <p>UNITY</p>
+  </div>
+    <!-- Repeat the above div for each skill -->
+  </div>
+</div>
+
+     </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<div id="imageModal" class="modal">
+  <div class="modal-body">
+    <img class="modal-content" id="modalImage">
+    <span class="close" onclick="closeModal()">&times;</span>
+  </div>
+  <div id="caption"></div>
+</div>
+<section id="certificates" class="swiper-section fade-in">
+       <h1 class="section-title sec-title">Certificates</h1>
+          <p class="secc"><span class="highlight">_what have I learned?</span></p>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 with overlay card -->
+            <div class="swiper-slide">
+               <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\1.png" alt="Code Fest 2020" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Android App Certificate</h3>
+                    <p class="project-subtitle">Code Fest 2020</p>
+                   
+                </div>
+              </div>
+            </div>
+            <!-- More slides with overlay cards -->
+                 <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\2.png" alt="Python 2022" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Python Essentials Certificate</h3>
+                    <p class="project-subtitle">Python 2022</p>
+                   
+                </div>
+            </div>
+          </div>
+             <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\3.png" alt="Tesda 2023" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Visual Graphic Design NCIII</h3>
+                    <p class="project-subtitle">Tesda 2023</p>
+        
+                </div>
+            </div>
+          </div>
+
+                   <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\4.png" alt="Tesda 2020" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Setting Up Computer Server Certificate</h3>
+                    <p class="project-subtitle">Tesda 2020</p>
+        
+                </div>
+            </div>
+          </div>
+
+                   <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\5.png" alt="Tesda 2020" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Maintaining Computer System and Networks Certificate</h3>
+                    <p class="project-subtitle">Tesda 2020</p>
+        
+                </div>
+            </div>
+          </div>
+
+                   <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\6.png" alt="Tesda 2020 loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Introduction to CSS Certificate</h3>
+                    <p class="project-subtitle">Tesda 2020</p>
+        
+                </div>
+            </div>
+          </div>
+
+                   <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\7.png" alt="Tesda 2020" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Installing and Configuring Computer Systems Certificate</h3>
+                    <p class="project-subtitle">Tesda 2020</p>
+        
+                </div>
+            </div>
+          </div>
+
+                        <div class="swiper-slide">
+                   <div class="img-container" onclick="openModal(this)">
+                <img src="Certificates\8.png" alt="Tesda 2020" loading="lazy"/>
+                <div class="project-card-overlay">
+                    <h3 class="project-title">Setting Up Computer Networks Certificate.</h3>
+                    <p class="project-subtitle">Tesda 2020</p>
+        
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+
+<!-- CONTACT SECTION -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("aCjjSZVWOiO1UfEA0");
+    })();
+</script>
+<section id="contact" class="fade-in">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-details">
+                <h1 class="sec-title gege">Get in Touch</span></h1>
+                <p style="font-family: 'Inter', sans-serif;">Thank you for exploring my portfolio! If you have any questions, collaboration ideas, or just want to connect, I'd love to hear from you. Here are some various ways to get in touch, Feel free to call me or drop me an email. I am excited to connect with you.</p>
+              
+              <!--Map-->  <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.513483300441!2d125.19527044719707!3d6.127073438791478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79e30b55e7f0d%3A0xf347249672a6cb82!2sLagao%2C%20General%20Santos%20City%2C%20South%20Cotabato!5e0!3m2!1sen!2sph!4v1712888731467!5m2!1sen!2sph" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Lagao, General Santos City</p>
+                  <p class="contact-info"><i class="fas fa-envelope"></i> rhencead@gmail.com</p>
+            </div>
+       <div class="col-md-6 contact-form">
+        <form id="contact-form" class="contact-form-card">
+          <div class="form-row">
+              <div class="form-group full-width">
+                  <input type="text" name="full_name" placeholder="Full Name" class="form-control" required>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group half-width">
+                  <input type="email" name="email" placeholder="Email" class="form-control" required>
+              </div>
+              <div class="form-group half-width">
+                  <input type="text" name="subject" placeholder="Subject" class="form-control" required>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group full-width">
+                  <textarea name="message" placeholder="Message" class="form-control textarea" required></textarea>
+              </div>
+          </div>
+          <div class="form-row">
+              <button type="submit" class="form-button">Send</button>
+          </div>
+      </form>
+        </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_7n156ic', 'template_p22jm76', this)
+          .then(function() {
+              alert('Email successfully sent!');
+          }, function(error) {
+              alert('Failed to send email: ' + JSON.stringify(error));
+          });
+  });
+</script>
+
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="container footer-content">
+              <div class="social-icons">
+            <a href="https://www.facebook.com/rhenceee?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://ph.linkedin.com/in/rhence-paradela-b32b29318" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/rhencepards" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>Rhence Paradela | Portfolio 2024</p>
+        <p>Built with Grit and Determination.</p>
+
+    </div>
+</footer>
+
+<script>
+// Function to hide or show projects
+function toggleProjectsVisibility() {
+  const projectsToToggle = document.querySelectorAll('.project-grid .project-card:nth-child(n+4)');
+  projectsToToggle.forEach(function(project) {
+    project.style.display = project.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Change the button text
+  const toggleButton = document.getElementById('toggleProjects');
+  toggleButton.textContent = toggleButton.textContent === 'Show More' ? 'Show Less' : 'Show More';
+}
+
+// Immediately hide the fourth and subsequent projects without waiting for DOMContentLoaded
+const projectsToToggle = document.querySelectorAll('.project-grid .project-card:nth-child(n+4)');
+projectsToToggle.forEach(function(project) {
+  project.style.display = 'none';
+});
+
+// Set up the event listener for when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('toggleProjects');
+  if (toggleButton) {
+    toggleButton.addEventListener('click', toggleProjectsVisibility);
+  } else {
+    console.error('Toggle button not found!');
+  }
+});
+
+</script>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', (event) => {
+    const fadeInLeftElements = document.querySelectorAll('.fade-in-left');
+    const fadeInRightElements = document.querySelectorAll('.fade-in-right');
+
+    const observerOptions = {
+        root: null,  // relative to the viewport
+        threshold: 0.1,  // percentage of the target's visibility the observer's callback should execute
+        rootMargin: "10px"
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('fade-in-left')) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.add('fade-in-left');
+                } else if (entry.target.classList.contains('fade-in-right')) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.add('fade-in-right');
+                }
+                observer.unobserve(entry.target);  // Stop observing the element after animation
+            }
+        });
+    }, observerOptions);
+
+    fadeInLeftElements.forEach(el => observer.observe(el));
+    fadeInRightElements.forEach(el => observer.observe(el));
+});
+
+
+</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+ // Function to open the modal
+function openModal(imgContainer) {
+    var img = imgContainer.querySelector('img');
+    var modal = document.getElementById('imageModal');
+    var modalImg = document.getElementById('modalImage');
+    var captionText = document.getElementById('caption');
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+}
+
+// Function to close the modal
+function closeModal() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+}
+
+
+</script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const lightModeToggle = document.getElementById('lightModeToggle');
+        lightModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+  // Function to check if the element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top < window.innerHeight && rect.bottom > 0
+  );
+}
+
+// Function to run on scroll
+function runOnScroll() {
+  // Select all sections with the 'fade-in' class
+  const elements = document.querySelectorAll('.fade-in');
+  for (const element of elements) {
+    // If the element is in the viewport, add the 'visible' class
+    if (isInViewport(element)) {
+      element.classList.add('visible');
+    }
+  }
+}
+
+// Listen for scroll events on the window
+window.addEventListener('scroll', runOnScroll);
+
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+$(document).ready(function(){
+    var lastScrollTop = 0; // Keeps track of last scroll position
+
+    $(window).scroll(function(){
+        var currentScroll = $(this).scrollTop(); // Current scroll position
+        
+        // If the current scroll position is higher than the last one, the user is scrolling up
+        if (currentScroll < lastScrollTop){
+            $('header .navbar').removeClass('hide-navbar'); // Show the navbar
+        } else {
+            $('header .navbar').addClass('hide-navbar'); // Hide the navbar
+        }
+
+        lastScrollTop = currentScroll; // Update the last scroll position
+        
+        // If the user reaches the top of the page, always show the navbar
+        if(currentScroll <= 0){
+            $('header .navbar').removeClass('hide-navbar');
+        }
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.hero-image').hover(
+        function() {
+            $(this).css('transform', 'rotate(-5deg)'); // Tilting image to the left on hover
+        },
+        function() {
+            $(this).css('transform', 'rotate(0deg)'); // Return to normal when not hovered
+        }
+    );
+});
+</script>
+
+</body>
+</html>

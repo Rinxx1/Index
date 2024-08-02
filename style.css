@@ -1,0 +1,2188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); /* Importing Roboto Black as an example */
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: #333;
+  background-image: url("bgg2.png");
+
+}
+
+/* Navbar fixed to the top */
+header {
+    background-color: #333; /* Or any color you prefer */
+    width: 100%;
+    position: fixed; /* Fixed position to keep it at the top */
+    z-index: 1050; /* Higher index to ensure it's above other elements */
+}
+header .navbar {
+    background-color: #333; /* Set your desired color */
+    transition: top 0.3s; /* Smooth transition for sliding effect */
+}
+
+/* This class will be toggled based on scroll direction */
+.hide-navbar {
+    top: -110%; /* Ensures the navbar is completely out of view */
+    transition: top 0.3s ease-in-out;
+}
+/* Restyling the navbar links */
+header nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Highlighting the active or hovered navbar link */
+header nav ul li a.active, header nav ul li a:hover {
+    background-color: transparent; /* Change for hover effect */
+    border-radius: 5px;
+}
+
+/* Style adjustments after the navbar */
+section {
+    padding: 60px 20px;
+    min-height: auto;
+    padding-top: 100px; /* Added padding to push content down below the fixed navbar */
+    justify-content: space-around; /* Distributes space around items */
+    align-items: stretch; /* Stretches items to fill the container */
+    gap: 30px; /* Adjust the gap between the cards */
+  /* Adds padding within the container */
+    margin: 0 auto; /* Center the grid horizontally if it's narrower than the container */
+    max-width: 1200px; 
+}
+.secb{
+    font-size: 1.5rem;
+  color: #aaa;
+  text-align: left;
+  padding-left: 30px;
+  margin-bottom: 3em;
+}
+
+
+/* This will affect the bottom margin of the experiences section */
+.experiences-section .container {
+    /* ... */
+    margin-bottom: 0; /* Remove any additional bottom margin */
+    /* ... */
+}
+
+
+
+#about, #contact {
+    background-color: #fff;
+
+}
+
+.pff{
+font-weight: bold;
+}
+#portfolio {
+    background-color: #f4f4f4;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        margin: 0 auto 20px;
+    }
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image, .project-info {
+        flex-basis: 100%;
+    }
+
+    .project-info {
+        margin-left: 0;
+    }
+}
+/*
+.scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+     z-index: 1;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
+*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin: 100px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+/* ... (rest of the CSS above remains unchanged) ... */
+.project-grid .project-card:nth-child(n+4) {
+    display: none;
+}
+.hide-project {
+  display: none;
+}
+
+.project-section{
+  margin-bottom: 8%;
+}
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    color: white;
+}
+
+.project-card {
+  display: flex;
+  align-items: stretch; /* Ensure child elements stretch to fill height */
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem; /* Space between cards */
+  height: auto; /* Ensure card takes appropriate height */
+  width: 100%;
+}
+
+.project-card .project-info {
+    padding: 50px; /* Padding within the card for text */
+}
+.project-image {
+  position: sticky;
+  flex-basis: 110%; /* Adjust the size ratio here */
+}
+
+.project-image img {
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 12px;
+  width: 100%;
+  height: 96%;
+  display: block;
+  transition: all 0.3s ease;
+}
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+}
+
+.project-details {
+
+  flex-basis: 70%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the inner content */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.project-description {
+  text-align: justify;
+  font-size: 1rem;
+  color: #aaa;
+  flex-grow: 2; /* Allows description to fill the space */
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  margin-bottom: 2.5rem;
+}
+.tag1{
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.tag {
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+.btn1 {
+  all: initial; /* Reset all styles */
+  color: white;
+  background-color: transparent;
+  border: none; /* Set your custom styles */
+}
+button#lightModeToggle.btn1.btn-light {
+  color: white !important;
+}
+button#lightModeToggle.btn1.btn-light:hover {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  background-color: transparent !important; /* Ensuring the background doesn't change on hover */
+}
+button#lightModeToggle.btn1.btn-light:focus,
+button#lightModeToggle.btn1.btn-light:active,
+button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important; /* In case it's a box-shadow */
+}
+
+.btney {
+  text-decoration: none;
+  margin-top: 5px; 
+  color: white;
+  background-color: #0066cc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.btn i {
+  margin-right: 8px; /* Adjust spacing between icon and text */
+  font-size: 1.4rem; /* Adjust the size of the icon */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  width: 20px; /* Adjust the width of the icon */
+  display: inline-block; /* Ensures the icon is treated as an inline block element */
+  text-align: center; /* Center the icon inside the inline block */
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: #0066cc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-flex; /* Make the button's content inline-flex for better alignment */
+  align-items: center; /* Align icon and text vertically in the center */
+  justify-content: center; /* Center the icon and text horizontally */
+
+  
+  background: linear-gradient(45deg, #ffcc00 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+.btn:hover {
+  background-position: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        padding: 0; /* Ensure no padding is affecting the grid */
+        margin: 0 auto; /* Center the grid if necessary */
+        max-width: inherit; /* Inherit the width from the parent to match the experiences section */
+    }
+
+    .project-card {
+        margin: 0 auto; /* Center the card in the grid */
+        padding: 0; /* Apply padding to match the experiences cards */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        width: 100%; /* Full width */
+
+    }
+
+    .project-image, .project-details {
+
+        width: 100%; /* Ensure both children take full width */
+    }
+
+    /* Make the image responsive */
+    .project-image img {
+        max-width: 100%; /* Max width is 100% of its parent */
+        height: auto; /* Height is auto to maintain aspect ratio */
+        display: block; /* Display block to remove any extra space below the image */
+    }
+
+    .project-details {
+        padding: 15px; /* Ensure padding matches that of the experiences cards */
+    }
+    
+    .experience-card {
+        margin: 0; /* Override any specific margin that might be present */
+        padding: 0 15px; /* Apply horizontal padding to match the project cards */
+    }
+}
+/* iPad Pro and other tablets */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) {
+    .project-card {
+        display: flex; /* Apply flex layout to the card */
+        flex-direction: column; /* Stack image and details vertically */
+        align-items: center; /* Center-align children */
+    }
+
+    .project-image {
+        width: 100%; /* Full width for the image container */
+        margin-bottom: 15px; /* Space between the image and the text */
+    }
+
+    .project-image img {
+        width: 100%; /* Full width for the image */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area without stretching */
+    }
+
+    .project-details {
+        width: calc(100% - 30px); /* Account for padding */
+        text-align: center; /* Center-align the text */
+    }
+}
+
+
+
+
+.project-info {
+    background: #333; /* Different background color for the text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    font-size: 1.5em; /* Larger font size for project title */
+    margin-bottom: 0.5em;
+}
+
+.project-info p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.project-info a {
+    /* Style your buttons or links here */
+    text-decoration: none;
+    color: white;
+    background-color: #0066cc; /* Example button color */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+/* Hover effect */
+.project-card:hover .project-info {
+    background: rgba(0, 0, 0, 0.8); /* Darken the overlay on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        grid-template-columns: 1fr; /* Stack image and text on small screens */
+    }
+
+    .project-info {
+        align-items: center; /* Center the text block */
+        text-align: center; /* Center align the text */
+    }
+}
+/* ... (rest of the CSS below remains unchanged) ... */
+
+/* ... (rest of the CSS above remains unchanged) ... */
+
+/* Ensure the intro section is using flexbox correctly */
+/* Intro section styling */
+/* Intro section styling */
+/* Additional styling */
+/* Reset margins and padding on the row and columns to remove unwanted space */
+/* Ensure the intro section is using flexbox correctly */
+/* Reset the default container padding */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Remove the default row margin */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Apply flexbox to the row and remove default Bootstrap gutter */
+.row.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0; /* Remove space between columns if necessary */
+}
+
+/* Assuming .custom-row is the flex container for your hero image and text */
+
+
+/* Rest of your CSS remains unchanged */
+
+/* Ensuring the container is set to flex and centers children */
+
+#home, #portfolio, #experiences, #about, #tools,#certificates, #contact {
+    background-color: transparent;
+    
+}
+
+/* Ensure that each section has a consistent top padding */
+#home, #portfolio, #experiences, #about, #tools,#certificates, #contact {
+    padding-top: 60px; /* Adjust this value to match your design preference */
+}
+#home .hero-text h1 {
+    font-family: 'Roboto', sans-serif; /* Your chosen font */
+    font-weight: 900; /* The weight for bold text, adjust as needed */
+}
+
+#home .hero-text p {
+    font-family: 'Roboto', sans-serif; /* Ensuring consistent font for the paragraph */
+    font-weight: normal; /* Regular font weight for paragraph */
+}
+
+#home {
+
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: space-evenly; /* Evenly space the image and text */
+  min-height: 100vh;
+  color: white;
+  padding: 0;
+  background-color: transparent;
+  flex-direction: row; /* Arrange children in a row */
+  text-align: center; /* Center text for all children */
+}
+/* Adjust the hero image to not touch the very left edge */
+.hero-image {
+  margin-right: 58%; /* Add some space between image and text */
+  max-width: 30%; /* Maximum width of the image */
+  max-height: 80vh; /* Maximum height of the image */
+  align-self: flex-start; /* Align to the start of the flex container */
+}
+
+/* Ensure the image retains its aspect ratio */
+.hero-image img {
+  width: 100%; /* Make it responsive to the container width */
+  height: auto; /* Keep the image aspect ratio */
+}
+
+/* Hero text styling */
+.hero-text {
+  margin-left: 13%; /* Add a bit of margin if needed */
+  text-align: left; /* Align the text to the left */
+}
+
+.hero-text h1 {
+ font-size: 5.5vw; /* Space between heading and paragraph */
+
+}
+
+.hero-text p {
+ font-size: 2vw;  /* Adjust paragraph font size according to your preference */
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 597px) {
+    .hero-image,.btney {
+    display: none; /* Hide the image on small screens */
+}
+.hero-text {
+    width: 100%;
+    margin: 0; /* Center the text on small screens */
+    font-size: 10px; /* Increase font size */
+}
+    .hero-text h1 {
+        font-size: 1vw; /* Larger size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 4.5vw; /* Larger size for smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+ .hero-image, .hero-text {
+        flex: 1; /* Both take up equal space */
+        font-size: 90px;
+    }
+.hero-text {
+    width: 100%;
+    margin-left: 0; /* Center the text on small screens */
+    font-size: 90px; /* Increase font size */
+}
+    .hero-text h1 {
+        font-size: 2.5rem; /* Larger size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 4.5vw; /* Larger size for smaller screens */
+    }
+
+}
+
+
+/* Adjust for very large screens to prevent text from becoming too big */
+@media screen and (min-width: 1000px) {
+  .hero-text h1 {
+    font-size: 3.6rem; /* Larger fixed size for larger screens */
+  }
+  .hero-text p {
+    font-size: 1.5rem; /* Adjust accordingly */
+  }
+}
+/* ... (rest of the CSS below remains unchanged) ... */
+
+
+.experiences-section {
+    background-color: #1a1a1a; /* Or the dark color you have on your website */
+    color: white;
+    padding: 60px 0;
+    font-family: 'Inter', sans-serif;
+     margin-bottom: 6%;
+}
+
+/*
+.section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: left;
+    padding-left: 15px; /* Aligns the title with the content
+}
+*/
+/*
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+*/
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #aaa;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 2em;
+}
+
+
+.experiences-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will take care of spacing between the cards */
+}
+.experiences-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+
+.experience-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.experience-header p {
+    font-size: 1rem;
+    color: #ccc;
+}
+.experience-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  flex: 0 1 calc(50% - 20px); /* Adjust the size and the spacing between the cards */
+  box-sizing: border-box;
+}
+.experience-header {
+    margin-bottom: 15px; /* Space between header and description */
+}
+
+.company-name {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.role {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.experience-description {
+  text-align: justify;
+  color: #aaa;
+}
+.experience-card .company-name {
+    color: #fff; /* White text color */
+    margin-bottom: 10px; /* Space below the company name */
+    font-weight: 700; /* Bold font weight */
+}
+
+.experience-card .role {
+    color: #ccc; /* Lighter text color for role */
+    margin-bottom: 15px; /* Space below the role before description */
+}
+
+.experience-card .experience-description {
+    color: #aaa; /* Even lighter text color for description */
+    font-size: 16px; /* Smaller font size for description */
+    line-height: 1.5; /* Line height for better readability */
+}
+@media (max-width: 768px) {
+  .experiences-wrapper {
+    flex-direction: column;
+  }
+  
+  .experience-card .about-card{
+    flex: 0 1 100%; /* On small screens, each card takes full width */
+  }
+} 
+
+
+.about-section {
+  background-color: #222; /* Dark background for the section */
+  color: #AAAAAA; /* White text color */
+  padding: 60px 0; /* Ample padding for spacing */
+  margin-bottom: 6%;
+
+}
+
+.about-section h2,
+.about-section p,
+.about-section .tag {
+  text-align: left; /* Align text to the left */
+}
+
+.about-subtitle {
+  color: #aaa; /* Light gray for subtitles */
+  margin-bottom: 1rem; /* Spacing between subtitle and paragraph */
+}
+.about-section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.about-text {
+
+  background-color: #222222; /* Black background for the text */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for the black background */
+  /* Space between the text and images, adjust as needed */
+}
+.about-text p {
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 1rem; /* Spacing between paragraphs */
+  color: #AAAAAA;
+}
+
+.about-tags {
+  padding: 1rem 0; /* Padding around tag area */
+}
+.tag1 {
+  display: inline-block;
+  background-color: #333; /* Dark background for tags */
+  color: #fff; /* White text for tags */
+  padding: 0.25rem 0.75rem; /* Padding inside tags */
+  margin-right: 0.5rem; /* Spacing between tags */
+  border-radius: 5px; /* Rounded corners for tags */
+  font-size: 0.85rem; /* Smaller font size for tags */
+  margin-bottom: 0.5rem; /* Space below tags */
+}
+
+.tag {
+  display: inline-block;
+  background-color: #333; /* Dark background for tags */
+  color: #fff; /* White text for tags */
+  padding: 0.25rem 0.75rem; /* Padding inside tags */
+  margin-right: 0.5rem; /* Spacing between tags */
+  border-radius: 5px; /* Rounded corners for tags */
+  font-size: 0.85rem; /* Smaller font size for tags */
+  margin-bottom: 0.5rem; /* Space below tags */
+}
+.about-images{
+   margin-top: 3.0rem; /* Space below tags */
+  
+}
+.about-images img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for the effect */
+  cursor: pointer; /* Change cursor to indicate the image is interactive */
+  width: calc(53% - 28px); /* Width for images, minus margin */
+  height: 39%; /* Keep aspect ratio */
+  margin: 3px;
+  margin-bottom: 16px; /* Space below images */
+  border-radius: 10px; /* Rounded corners for images */
+   filter: blur(4px);
+}
+
+.about-images img:hover {
+  transform: scale(1.1) translateX(-3%) rotate(-1deg); /* Scale up, move to the left, and rotate the image on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add a shadow effect on hover */
+  filter: none; /* Remove the blur effect on hover */
+}
+
+.project-image.project-image img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for the effect */
+  cursor: pointer; /* Change cursor to indicate the image is interactive */
+  width: calc(100% - 10px); /* Width for images, minus margin */
+  height: 96%; /* Keep aspect ratio */
+  border-radius: 10px; /* Rounded corners for images */
+   filter: blur(2px);
+}
+
+.project-image .project-image-left img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for the effect */
+  cursor: pointer; /* Change cursor to indicate the image is interactive */
+  width: calc(10% - 10px); /* Width for images, minus margin */
+  height: 96%; /* Keep aspect ratio */
+  margin: 3px;
+  margin-bottom: 16px; /* Space below images */
+  border-radius: 10px; /* Rounded corners for images */
+   filter: blur(1px);
+}
+
+
+.project-image .project-image-right img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for the effect */
+  cursor: pointer; /* Change cursor to indicate the image is interactive */
+  width: calc(10% - 10px); /* Width for images, minus margin */
+  height: 96%; /* Keep aspect ratio */
+  margin: 3px;
+  margin-bottom: 16px; /* Space below images */
+  border-radius: 10px; /* Rounded corners for images */
+   filter: blur(1px);
+}
+
+.project-image.project-image-right img:hover{
+  transform: scale(1.0) translateX(3%); /* Scale up, move to the left, and rotate the image on hover */
+  filter: none; /* Remove the blur effect on hover */
+}
+
+
+.project-image.project-image-left img:hover {
+  transform: scale(1.0) translateX(-3%); /* Scale up, move to the left, and rotate the image on hover */
+  filter: none; /* Remove the blur effect on hover */
+}
+
+@media (max-width: 768px) {
+  .about-section .row {
+    flex-direction: column; /* Stack the text and images on top of each other */
+  }
+
+  .about-text {
+    /* This should target the outer container of the about section, not just the text */
+    background-color: #222222; /* Black background for the text */
+    padding: 15px; /* Adjust padding to match the experience section */
+    border-radius: 10px; /* Rounded corners for the black background */
+    margin: 0 auto; /* Center the card */
+    width: 93%; /* Full width to match the experience card */
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+
+  .about-images {
+    order: 2; /* The images come after the text */
+    width: 100%; /* Full width of the container */
+    margin-top: 20px; /* Space between text and images */
+  }
+
+  .about-images img {
+    width: 100%; /* Full width of images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between images */
+  }
+}
+
+
+
+/* Tools and Frameworks section styling */
+.tools-section {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+
+.section-title {
+  text-align: left; /* Aligns the title to the left */
+  padding-left: 15px; /* Aligns the title with the content */
+  /* ... Your other styles for the title ... */
+
+}
+
+.tools-content {
+  display: flex;
+  align-items: center; /* Adjust this to align items to the center */
+  justify-content: flex-start; /* Align to the start to remove space before the items */
+  gap: 80px; /* You can reduce this value to make items closer */
+
+}
+.expertise .skill, .others .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.others .skill:nth-child(4)::after {
+  content: '';
+  grid-column: 5;
+}
+.others h3 {
+  text-align: left;
+ margin-bottom: 5%;
+}
+
+.expertise h3 {
+  /* Keep these if they are centering your titles as needed */
+  text-align: left;
+
+  margin-bottom: 5%;
+}
+
+.tools-image img {
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+ /* Indicates the image is interactive */
+  margin-right: 40%;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+      margin-right: 10%;
+        }
+.tools-image {
+  /* If you have a specific width here, you can adjust it to make the image container smaller */
+   flex: 1 1 80%;/* Change the flex-basis to adjust the width */
+  /* Remove any margin or padding that may be creating extra space */
+
+}
+.others-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  /* Any other style you want to apply specifically to this title */
+}
+
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr); /* Creates a grid with 3 equal columns */
+  gap: 50px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 60px; /* Height of the skill box, adjust as needed */
+  width: 80px;  /* Width of the skill box, adjust as needed */
+}
+
+
+.skill-icon {
+  width: 60px; /* Adjust icon size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 8px; /* Space between icon and text */
+}
+
+.skill p {
+  min-width: 80px; /* Adjust as needed for your design */
+}
+
+.tools-details {
+  flex: 0 1 auto; /* Do not allow the flex item to grow */
+  padding-left: 50px; /* Spacing on the left */
+}
+
+.tools-content .expertise .skill-icon .others{
+  display: block; /* Makes the image a block element */
+  margin-left: auto;
+  margin-right: auto; /* Centers the image */
+  width: 50px; /* Adjust as necessary */
+  height: auto; /* Maintains aspect ratio */
+}
+.tools-content .expertise .skill p .others .skill p {
+  margin-top: 5px; /* Adjust as necessary */
+}
+.tools-content .expertise h3 {
+  margin-bottom: 20px;
+}
+
+.tools-content .expertise .skill .others {
+  margin-bottom: 10px; /* Adjust as necessary */
+}
+.expertise, .others {
+  margin-bottom: 60px; /* Reduce bottom margin to bring sections closer together */
+}
+
+.tools-details h3 {
+  margin-bottom: 30px; /* Space between heading and list */
+}
+
+.tools-details ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.tools-details li {
+  display: inline-block; /* Display icons inline */
+  margin-right: 10px; /* Space between icons */
+}
+
+
+@media (max-width: 768px) {
+  .tools-header h2, 
+  .tools-text {
+     margin: 0 auto;
+    text-align: center; 
+  }
+ .tools-details {
+        width: 100%; /* Full width for the details */
+        text-align: center; /* Center text for the list items */
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+    }
+  .tools-image img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 80%; 
+    height: auto;
+  }
+
+   .tools-content {
+    flex-direction: column;
+    align-items: center;
+  }
+.tools-details{
+   padding-left: 0; /* Removes padding for mobile view */
+} 
+  .expertise, 
+  .others {
+    width: 100%; /* Full width for the details */
+    align-items: center; /* Center-align the flex items */
+    justify-content: center; /* Center content (if flex is used) */
+    display: block; /* Change display to block if needed */
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: row; /* Line items in a row */
+    justify-content: space-evenly; /* Distribute space evenly */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+  
+  .skill {
+    /* Adjustments for individual skill blocks */
+    margin: 5px; /* Manage spacing between skills */
+    width: auto; /* Let the width be automatic to accommodate content */
+  }
+
+ 
+  .tools-container, .tools-section {
+    padding: 20px; 
+  }
+    .section-title {
+     text-align: left; 
+
+}
+
+
+}
+#contact {
+    padding: 60px 0;
+    color: #fff;
+    /* Assuming you still want a dark background for the section */
+
+}
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px; /* Adjust top padding */
+    padding-bottom: 60px; /* Adjust bottom padding */
+}
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the start of the text with the form */
+    gap: 20px;
+}
+
+.contact-details {
+    max-width: 50%;
+
+}
+.contact-details p{
+text-align: justify;
+text-justify: inter-word;
+}
+.contact-details h2{
+  margin-bottom: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.contact-text h2 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-text p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+
+/* Contact Form Card Styles */
+.contact-form-card {
+    background: #333; /* Dark background for the form card */
+    padding: 35px;
+    border-radius: 3px;
+    color: #fff; /* Text color */
+     margin-top: 13%;
+}
+
+/* Base styles for form controls */
+.form-control {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 7px; /* Spacing between each field */
+    background-color: #fff; /* White background for input fields */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 3px;
+}
+
+
+/* Style for form rows */
+.form-row {
+    display: flex;
+    justify-content: space-between; /* This will place a small gap between two half-width fields */
+}
+.form-control.textarea {
+    height: 150px; /* Adjust the height as needed */
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+/* Full width form group */
+.full-width {
+    width: 100%;
+}
+/* Half width form group for email and subject side by side */
+.half-width {
+    width: 48%; /* Slightly less than half to account for the gap between fields */
+}
+
+/* Style for the button */
+.form-button {
+    background-color: #08acec; /* Blue background for the SEND button */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    
+    margin-top: 0; /* Align with the fields */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0077cc; /* Slightly darker blue on hover */
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: 15px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack the input fields on small screens */
+    }
+
+    .half-width,
+    .full-width {
+        width: 100%; /* Full width for each field on small screens */
+    }
+
+    /* Adjust margins for mobile layout */
+    .contact-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* Ensure the map and contact details take full width on smaller screens */
+    .contact-details, 
+    .col-md-6.contact-form {
+        width: 100%;
+    }
+
+    /* Adjust contact details layout on mobile */
+    .contact-details {
+        margin-bottom: 20px; /* Add some margin below the contact details */
+        text-align: center; /* Center the text for mobile */
+    }
+
+    .contact-details iframe {
+        max-width: 100%; /* Make sure the map is not wider than the screen */
+        height: auto; /* Adjust height automatically */
+    }
+
+    /* Center the form on mobile */
+    .col-md-6.contact-form {
+        padding: 0;
+    }
+}
+
+/* Apply additional specific styles for iPhone 14 Pro Max */
+@media only screen 
+  and (min-device-width: 428px) 
+  and (max-device-width: 926px) 
+  and (orientation: portrait) {
+    .contact-form-card {
+        margin: 0 auto; /* Center the form card on larger mobile devices */
+        max-width: 400px; /* Optional: Restrict the form width on larger devices */
+    }
+}
+
+
+
+footer {
+  display: flex;
+    flex-direction: column;
+   background-color: transparent;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; /* Center the text if it's on one line */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Stack the content */
+}
+
+.footer-content p {
+    margin-bottom: 0.3em; /* Add space between the lines */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.social-icons i {
+    /* Styling for social icons */
+    margin-right: 0.5em; /* Space between icons */
+}
+.social-icons a {
+    color: #fff; /* Color of your icons */
+    margin: 0 10px; /* Spacing between icons */
+    font-size: 1.5rem; /* Size of icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Color when icon is hovered over */
+}
+.contact-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+}
+.contact-content iframe {
+  width: 100%; /* Full width of the container */
+  height: 300px; /* Fixed height, or you can use a percentage */
+  border: 0;
+  max-width: 550px; /* Optional: if you want to limit how wide the iframe can get */
+  border-radius: 10px;
+
+}
+.aspect-ratio-169 {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 10px; /* This will give the iframe rounded corners */
+  overflow: hidden; /* This will ensure the iframe corners are also rounded */
+}
+
+/* The iframe is absolutely positioned inside the wrapper to fill it */
+.aspect-ratio-169 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+    /* Contact section layout for larger screens */
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .contact-details,
+    .contact-form {
+        flex: 1; /* Make both children take up half the space */
+        max-width: 50%; /* Limiting their width to half of their parent container */
+        padding: 0 15px; /* Add some padding */
+    }
+.contact-form-card {
+    background: #222222; /* Dark background for the form card */
+    padding: 25px;
+    border-radius: 8px;
+}
+}
+
+@media screen and (max-width: 767px) {
+    /* Stack the contact details and form on top of each other on smaller screens */
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-details,
+    .contact-form {
+        max-width: 100%; /* Allow each to take full width of the container */
+        margin-bottom: 30px; /* Add some space between the stacked elements */
+    }
+.contact-form-card {
+    background: #222222; /* Dark background for the form card */
+    padding: 25px;
+    border-radius: 8px;
+}
+}
+
+.sec-title{
+  text-align: left;
+  font-weight: bold; color: White;
+    font-family: 'Inter', sans-serif;
+}
+/* Initial state of sections with the 'fade-in' class */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  visibility: hidden; 
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; 
+}
+
+.skill-image {
+    transition: transform 0.3s ease; /* Smooth transition for the pop-up effect */
+}
+
+.skill-image:hover {
+    transform: scale(1.2); /* Scale up the image to create a pop-up effect */
+}
+.highlight {
+    color: #08acec; /* Change to your desired color */
+}
+
+.light-mode .form-control::placeholder{
+        color: #010d12;
+}
+.light-mode .form-control:-ms-input-placeholder{
+        color: #010d12;
+}
+.light-mode .form-control::-ms-input-placeholder{
+        color: #010d12;
+}
+
+.light-mode header,
+.light-mode nav,
+.light-mode .navbar{
+    background-color: #fff;
+    color: #000;
+}
+
+.light-mode header .navbar-nav .nav-link {
+    color: #000;
+}
+.light-mode .hero-text{
+  color:#010d12;
+}
+.light-mode .navbar-brand{
+  color:#010d12;
+}
+.light-mode .section-title {
+    color: #010d12;
+}
+body.light-mode {
+  background-image: url("bgg1.png");
+    background-color: #fff;
+ 
+    /* other styles */
+}
+.light-mode .section-title {
+    color: #010d12 !important;
+}
+
+
+.light-mode #home{
+  background-color: transparent;
+    
+}
+.light-mode #portfolio{
+  background-color: transparent;
+    
+    
+}
+
+.light-mode #experiences{
+  background-color: transparent;
+    
+    
+}
+.light-mode #certificates{
+  background-color: transparent;
+    
+}
+.light-mode #about{
+  background-color: transparent;
+    
+    
+}
+
+.light-mode #tools{
+  background-color: transparent;
+    
+    
+}
+
+.light-mode #contact{
+  background-color: transparent;
+    
+    
+}
+.light-mode #footer{
+    background-color: transparent;
+}
+.light-mode .navbarContent{
+  background-color: #fff;
+}
+  /* Cards*/
+.light-mode .sec-title{
+    color:#010d12;
+}
+.light-mode .project-card{
+  background-color: #ededed;
+}
+.light-mode .project-title{ 
+ color:#010d12;
+}
+.light-mode .project-subtitle{
+ color:#010d12;
+}
+.light-mode .project-description{
+ color:#010d12;
+}
+.light-mode .tag{
+   background-color: #d4d4d4;
+   color: #010d12;
+}
+.light-mode .experience-card{
+   background-color: #ededed;
+}
+.light-mode .company-name{
+   color:#010d12;
+}
+.light-mode .experience-description{
+   color:#010d12;
+}
+.light-mode .about-text p{
+    color: #010d12;
+}
+.light-mode .about-text{
+       background-color: #ededed;
+       color: #010d12;
+}
+.light-mode .tag1{
+   background-color: #d4d4d4;
+   color: #010d12;
+}
+.light-mode .flex-container{
+   color: #010d12;
+}
+.light-mode .contact-details{
+  color: #010d12;
+}
+.light-mode .contact-form-card{
+background-color: #ededed;
+}
+.gege{
+  margin-bottom: 5%;
+}
+.light-mode footer{
+  background-color: transparent;
+  color: #010d12;
+}
+.light-mode .social-icons a {
+    color: #010d12;
+}
+.light-mode .navbar-toggler-icon{
+ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+.light-mode .project-image.project-image{
+  filter: drop-shadow(5px 4px 5px rgb(0, 0, 0));
+}
+.light-mode .project-image.project-image.project-image-right{
+  filter: drop-shadow(-5px 4px 5px rgb(0, 0, 0));
+}
+
+
+.light-mode ul.navbar-nav.ml-auto .nav-link {
+  color: #010d12; /* Or any color you want for light mode */
+}
+
+.light-mode .nav-item.active a.nav-link {
+  background: none;
+  color: #010d12;
+   /* Text color for light mode */
+}
+.light-mode .nav-item a.nav-link.active{
+  background-color: none;
+  color: #010d12;
+}
+.light-mode .nav-item a.nav-link:hover,
+.light-mode .nav-item a.nav-link:focus {
+  border-color: #000; /* Shows black border on hover or focus in light mode */
+  color: #010d12;
+}
+
+/* Styles for the active item in light mode when hovering or focusing */
+.light-mode .nav-item.active:hover,
+.light-mode .nav-item.active:focus {
+  border-color: none; /* Keeps black border on hover or focus for active item in light mode */
+  color:#010d12;
+}
+/* Light mode styles */
+.light-mode .handwave {
+  color: #000; /* Or any other color you want for the light mode */
+}
+
+.light-mode #mapIframe {
+  filter: invert(90%);
+}
+.light-mode .project-tags .tag{
+   background-color: #d4d4d4;
+   color: #010d12;
+
+ 
+}
+.light-mode .skill p {
+  font-weight: bold;
+}
+.light-mode .nav-item a.nav-link::after{
+  background-color: #010d12;
+  color: #010d12;
+}
+
+.light-mode .tag:hover{
+
+   color: #010d12;
+ 
+}
+.light-mode .project-card-overlay{
+  background-color: #ededed;
+}
+/* Reset the current border styles */
+.nav-item a.nav-link {
+  position: relative;
+  padding-bottom: 10px; /* Add padding to the bottom to create space for the underline */
+}
+/* Hover effect for nav links */
+.nav-item a.nav-link:hover,
+.nav-item a.nav-link:focus {
+  background: none; /* No background change on hover */
+  color: #fff; /* Text color remains white on hover */
+}
+
+.nav-item a.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Adjust bottom to position the underline below the text */
+  height: 2px;
+  background-color: #fff; /* This should be the color of your underline */
+  transform: scaleX(0); /* Start with no width to have a nice transition */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-in-out;
+}
+
+.nav-item a.nav-link:hover::after,
+.nav-item.active a.nav-link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(-10deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(10deg);
+  }
+}
+.light-mode #lightModeToggle .fas {
+  color: #010d12;
+
+}
+.handwave {
+  display: inline-block;
+  animation: waveAnimation 1.5s ease-in-out infinite;
+  transform-origin: 70% 70%; /* Adjust the pivot point of the wave */
+}
+.hero-icons {
+  display: flex;
+  text-align: left;
+  justify-content: start;
+  gap: 13px; /* This creates space between the buttons */
+  margin-top: 16px; /* Adjust the margin as needed */
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #08acec; /* Your green background color */
+  border-radius: 50%; /* This makes the buttons circular */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height, equal to the width for a perfect circle */
+  color: white; /* Text color */
+  font-size: 20px; /* Adjust the size of the icon inside */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Smooth background transition */
+   margin-right: 15px;
+}
+
+
+
+.icon-button:hover {
+  background: #2CA84A; /* Slightly darker green on hover */
+}
+/* Base styles for tags */
+/* Base styles for tags (affects all screen sizes) */
+.project-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4B4B4B;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin: 0.25rem; /* Adjust the margin as needed */
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.project-tags .tag img.tag-icon {
+  width: 1.5rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+/* Specific tag background colors */
+.html-tag { background-color: #E34F26; }
+.css-tag { background-color: #1572B6; }
+.bootstrap-tag { background-color: #563D7C; }
+.js-tag { background-color: #F7DF1E; color: #323330; }
+.sql-tag { background-color: #563D7C; }
+.php-tag { background-color: #563D7C; }
+.c#-tag { background-color: #563D7C; }
+.project-tags .tag:hover {
+  background-color: #5A5A5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop and larger tablets: Default styles without flex changes */
+@media (min-width: 769px) {
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .project-tags .tag {
+    margin: 0.25rem; /* Consistent margin for all sides */
+  }
+}
+
+/* Mobile and small tablets: limit to 3 tags per line */
+@media (max-width: 768px) {
+  .project-tags .tag {
+    margin: 0.25rem; /* Consistent margin for all sides */
+    flex: 1 0 calc(33.333% - 0.5rem); /* Three tags per line */
+  }
+
+  .project-tags .tag:nth-last-child(-n+3) {
+    margin-bottom: 0; /* Removes bottom margin for the last three items to avoid extra space at the bottom */
+  }
+}
+
+/* Further spacing adjustments for very small screens */
+@media (max-width: 480px) {
+  .project-tags .tag {
+    flex: 1 0 100%; /* Full width tags for very small screens */
+    margin: 0.25rem 0; /* Only top and bottom margins */
+  }
+}
+
+
+/*CERTIFICATE SECTION*/
+
+.secc{
+    font-size: 1.5rem;
+  color: #aaa;
+  text-align: left;
+  padding-left: 30px;
+  margin-bottom: 1em;
+}
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+
+.modal-content {
+  top: 110px;
+  width: 100%; /* Make image full width of its container */
+  display: block; /* Image blocks */
+}
+.modal-body {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Caption of Modal Image */
+#caption {
+  text-align: center;
+  color: #ccc;
+  top: 110px;
+  position: relative;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color:  #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .modal {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-body {
+    width: 95%; /* Adjust if necessary for smaller screens */
+    height: auto; /* Height is determined by content */
+    position: relative; /* Needed for absolute positioning of the close button */
+  }
+
+  .modal-content {
+    width: 100%; /* Full width of modal-body */
+    height: auto; /* Height is determined by content */
+    margin: auto; /* Helps with centering if needed */
+    /* Removed top and transform properties as flexbox is taking care of centering */
+  }
+  .close {
+    position: absolute;
+    top: 120px; /* Position from the top of modal-body */
+    right: 20px; /* Position from the right of modal-body */
+
+ color:  #000000;
+  font-size: 40px;
+  }
+  #caption {
+    /* Ensure caption is within the modal-body and not overlapping the close button */
+   position: relative;
+    top: 110px;
+    box-sizing: border-box; /* Includes padding in the width */
+  }
+}
+
+
+
+
+
+
+.swiper-container {
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Swiper slide image */
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Project card overlay styles */
+.project-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 18px 18px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.swiper-slide:hover .project-card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project card content styles */
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* Base mobile styles */
+@media (max-width: 768px) {
+    .swiper-container .swiper-slide img {
+        height: auto;
+        max-height: 650px; /* Set a max-height for smaller screens */
+    }
+    
+    .project-card-overlay {
+        padding: 15px; /* Reduce padding on smaller screens */
+        bottom: -15px; /* Position it closer to the bottom edge */
+    }
+    
+    .project-card-overlay h3.project-title {
+        font-size: 1rem; /* Reduce font size for the title */
+    }
+    
+    .project-card-overlay .project-subtitle {
+        font-size: 0.8rem; /* Reduce font size for the subtitle */
+    }
+    
+    .project-card-overlay .project-description {
+        font-size: 0.7rem; /* Reduce font size for the description */
+    }
+
+    .project-card-overlay .project-tags {
+        font-size: 0.6rem; /* Reduce font size for tags */
+    }
+
+    .project-card-overlay .btn {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.7rem; /* Adjust button font size */
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem; /* Adjust section title size */
+        margin-bottom: 20px; /* Adjust section title margin-bottom */
+    }
+}
+
+/* Specific adjustments for very small screens */
+@media (max-width: 480px) {
+    .swiper-container .swiper-slide img {
+        max-height: 200px; /* Further reduce max-height for very small screens */
+    }
+
+    .swiper-slide {
+        height: auto; /* Allow the slide height to grow as needed */
+    }
+
+    .project-card-overlay {
+        padding: 10px; /* Even smaller padding for the overlay */
+    }
+
+    .section-title h2 {
+        font-size: 1.2rem; /* Even smaller section title for very small screens */
+    }
+}
+@media screen and (min-width: 599px) and (max-width: 773px) {
+   .tools-image{
+      display: none;
+    }
+}
+
+/* Styles for devices with dimensions between 598px to 991px */
+@media screen and (min-width: 599px) and (max-width: 991px) {
+
+
+    .hero-image {
+     display: none;
+    }
+
+    .hero-text {
+        /* Adjust hero text styling for medium devices */
+        margin-left: 0; /* Center the text */
+        padding: 20px; /* Add some padding */
+    }
+
+    .project-card {
+        /* Adjust project card styling for medium devices */
+        flex-direction: column; /* Stack the elements */
+    }
+
+    .experience-card {
+        /* Your previous code here might have been empty. Fill it with: */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* or 'center' if you want to center them */
+        /* Other styles */
+    }
+    .about-section, .tools-section, .contact-section {
+        /* Adjust about, tools, and contact section styling for medium devices */
+        padding: 40px 20px; /* Adjust padding */
+    }
+
+    .contact-details, .col-md-6.contact-form {
+        /* Adjust contact details and form for medium devices */
+        flex-direction: column; /* Stack them on top of each other */
+    }
+
+    /* Additional adjustments to the layout, fonts, and other elements can be added here */
+}
+
+/* Styles for devices with dimensions less than 598px */
+@media (max-width: 599px) {
+    /* Previous styles for smaller devices */
+}
+
+    /* Left and right animation gimmick */
+
+    /* Keyframes for fading in from the left */
+/* Keyframes for fading in from the left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for fading in from the right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Projects */
+.fade-in-left {
+    animation: fadeInLeft 2.1s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 2.1s ease-out forwards;
+}
+
+/* Ensure elements are initially hidden */
+.fade-in-left, .fade-in-right {
+    opacity: 0;
+}
+
+
+
+
+/* Container for the sticky buttons */
+.sticky-container {
+  position: fixed;
+  bottom: 30px; /* Adjust as needed */
+  right: -2px; /* Adjust as needed */
+  width: 100px; /* Set a fixed width for the container */
+  height: auto; /* The height will be determined by the content */
+    
+  background-size: cover; /* This will cover the area of the container */
+  padding: 10px; /* Adjust as needed for spacing */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  z-index: 1000;
+}
+
+/* Scroll Up Button */
+.scroll-to-top {
+  margin-bottom: 10px; /* Space between buttons */
+  cursor: pointer;
+  background: none; /* No background */
+  border: none; /* Remove border */
+}
+
+.scroll-to-top img {
+  width: 40px; /* Adjust if needed */
+  height: 40px; /* Adjust if needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover img {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Light Mode Toggle Button */
+#lightModeToggle {
+  cursor: pointer;
+  background: none; /* No background */
+  border: none; /* Remove border */
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+#lightModeToggle img {
+  width: 40px; /* Adjust if needed */
+  height: 40px; /* Adjust if needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+#lightModeToggle:hover img {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+
+/*New Project Details*/
+.project-details.project-details-left {
+  order: 2; /* Ensure project details appear below project image */
+}
+
+.project-image.project-image-right {
+  order: 1; /* Ensure project image appears above project details */
+}
+
+@media screen and (min-width: 1026px) { 
+.project-details.project-details-left {
+  order: 1; /* Ensure project details appear below project image */
+}
+
+.project-image.project-image-right {
+  order: 2; /* Ensure project image appears above project details */
+}
+
+}
