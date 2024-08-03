@@ -909,9 +909,31 @@ button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Space between images */
   }
+  /*BRUCETV*/
+
 }
 
-
+@media (max-width: 500px) {
+  .swiper-container .swiper-wrapper{
+    width: 132%; /* Full width of images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .project-card .project-image{
+    width: 114%; 
+    height: auto;
+  }
+  .project-image.project-image-left img:hover {
+    transform: scale(1.0) translateX(-4.5%); /* Scale up, move to the left, and rotate the image on hover */
+    filter: none; /* Remove the blur effect on hover */
+  }
+  .project-image.project-image-right img:hover {
+    transform: scale(1.0) translateX(-5%); /* Scale up, move to the left, and rotate the image on hover */
+    filter: none; /* Remove the blur effect on hover */
+  }
+  .skills-container {
+    padding-left: 29px;
+  }
+}
 
 /* Tools and Frameworks section styling */
 .tools-section {
