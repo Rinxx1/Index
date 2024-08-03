@@ -399,7 +399,7 @@ button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
     }
 
     .project-image, .project-details {
-
+        
         width: 100%; /* Ensure both children take full width */
     }
 
@@ -593,7 +593,7 @@ button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
 /* Responsive adjustments */
 
 @media (max-width: 597px) {
-    .hero-image,.btney {
+    .hero-image,.btney{
     display: none; /* Hide the image on small screens */
 }
 .hero-text {
@@ -825,7 +825,7 @@ button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
 .about-images img {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for the effect */
   cursor: pointer; /* Change cursor to indicate the image is interactive */
-  width: calc(53% - 28px); /* Width for images, minus margin */
+  width: calc(50% - 12px); /* Width for images, minus margin */
   height: 39%; /* Keep aspect ratio */
   margin: 3px;
   margin-bottom: 16px; /* Space below images */
@@ -1053,12 +1053,17 @@ button#lightModeToggle.btn1.btn-light:hover { /* Add hover state if needed */
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  /*BRUCETV*/
   .tools-header h2, 
   .tools-text {
      margin: 0 auto;
     text-align: center; 
   }
+  .tools-image{
+    display: none;
+  }
+
  .tools-details {
         width: 100%; /* Full width for the details */
         text-align: center; /* Center text for the list items */
@@ -1743,7 +1748,8 @@ background-color: #ededed;
 .php-tag { background-color: #563D7C; }
 .c#-tag { background-color: #563D7C; }
 .project-tags .tag:hover {
-  background-color: #5A5A5A;
+  background-color: #ff0000;
+  color: #FFF;
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -1768,7 +1774,7 @@ background-color: #ededed;
     flex: 1 0 calc(33.333% - 0.5rem); /* Three tags per line */
   }
 
-  .project-tags .tag:nth-last-child(-n+3) {
+  .project-tags .tag:nth-last-child(-n+8) {
     margin-bottom: 0; /* Removes bottom margin for the last three items to avoid extra space at the bottom */
   }
 }
@@ -2024,8 +2030,8 @@ background-color: #ededed;
 }
 
 /* Styles for devices with dimensions between 598px to 991px */
-@media screen and (min-width: 599px) and (max-width: 991px) {
-
+@media screen and (min-width: 598px) and (max-width: 991px) {
+/* 599 na*/
 
     .hero-image {
      display: none;
@@ -2063,7 +2069,12 @@ background-color: #ededed;
 }
 
 /* Styles for devices with dimensions less than 598px */
-@media (max-width: 599px) {
+@media (min-width: 390px) and (max-width: 404px) {
+  .hero-text {
+    /* Adjust hero text styling for medium devices */
+    margin-left: 0; /* Center the text */
+    padding: 10px; /* Add some padding */
+}
     /* Previous styles for smaller devices */
 }
 
